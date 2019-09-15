@@ -2,6 +2,7 @@
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import spa_web
+import spa_web_apa.py as scrape 
 
 
 # create instance of Flask app
@@ -27,7 +28,7 @@ def home():
 def scrape():
 
     # Run the scrape function
-    apa_data = get_all_apa_data()
+    apa_data = scrape.get_all_apa_data()
 
     # Update the Mongo database using update and upsert=True
     mongo.db.collection.update({}, apa_data, upsert=True)
