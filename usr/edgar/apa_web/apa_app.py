@@ -1,7 +1,7 @@
 # import necessary libraries
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
-import spa_web_apa as scrape 
+import scrape_web_apa as scrape 
 
 
 # create instance of Flask app

@@ -4,36 +4,46 @@ from bs4 import BeautifulSoup
 import requests
 from splinter import Browser
 import pandas as pd
+import platform
 import subprocess
 import time
 import re
 
-#Pick the driver location
-#get_ipython().system('which chromedriver')
-
-driver_path = subprocess.Popen("which chromedriver", shell=True, stdout=subprocess.PIPE).\
-                stdout.read().decode("utf-8").split('\n')[0]
-print(driver_path)
-
-debug = False
 
 #function used to initilize the browser
 def strat_browser():
-    executable_path = {'executable_path': 'chromedriver'}
-    browser = Browser('chrome', **executable_path, headless=False)
-    return browser
+    '''
+    Return the browser object to do data scrape
+
+    Params: None
+
+    Return: browser object
+    '''
+    if(platform.system() == 'Darwin'):
+        print("Mac system detected, loading chrome driver...")
+        executable_path = {'executable_path': 'chromedriver'}
+        browser = Browser('chrome', **executable_path, headless=False)
+        return browser
+    elif(platform.system() == 'Windows'):
+        print("Mac system detected, loading chrome driver...")
+        #-------------------------------
+        #Edgar add you browser code here
+        #-------------------------------
+
+        #-------------------------------
+    else:
+        raise OSError("Platform not supported")
 
 
-#Function used to scrape mars data
-def scrape_data():
+#Function used to scrape the data
+def get_pages_count(soup):
+    '''
+    Return the number of pages to visit for APA that contain dog information
 
-    dog_dict = dict()
+    Params: soup --> BeautifulSoup object
 
-    #browser creation
-    browser = strat_browser()
-
-    #-----------------------------
-    def get_pages_count(soup):
+    Return: pet_entry --> number of pages to iterate
+    '''
     #Get the pagination division
     pagination = soup.find('div', class_='pagination')
     pages = list()
@@ -41,12 +51,19 @@ def scrape_data():
         pages.append(page.text)
     return(int(pages[-1]))
 
-    def get_pet_info_by_url(soup):
+def get_pet_info_by_url(soup):
+    '''
+    Parse the dog information into a dictionary to append to Mongo DB
+
+    Params: soup --> BeautifulSoup object
+
+    Return: pet_entry --> dictionary will all pat information
+    '''
     #Main dictionary that will hold the data base entry
     pet_entry = dict()
     # Get all dog information
     all_dogs_per_page = soup.find_all('div', class_='large-tile')
-    #Parse the data
+    #Parse teh data
     for dog in all_dogs_per_page:
         #Dictonary used to store the data
         pet_data = dict()
@@ -83,14 +100,21 @@ def scrape_data():
                 stars = category.find_all('img')
                 for star in stars:
                     if('star full' == star['alt']):
-                        category_score += 1
+                         category_score += 1
                 #Update the dictionary for each stat
                 pet_data.update({category_name:category_score})
         #Update the main dictionary with the ID as main key and return
         pet_entry.update({pet_id:pet_data})
     return pet_entry
 
-    def get_all_apa_data():
+def get_all_apa_data():
+    '''
+    Parse all dog information for APA dogs
+
+    Params: None
+
+    Return: pet_entry --> dictionary with the information
+    '''
     #main page for DOG adoption APA
     main_url = url = 'https://www.austinpetsalive.org/adopt/dogs'
     #Base url to add the page to scrape
@@ -98,8 +122,7 @@ def scrape_data():
     #Dictionary used to store all the data scraped
     pet_data = dict()
     #create the browser object
-    executable_path = {'executable_path': 'chromedriver'}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = strat_browser()
     #Create the defult list of URLs to vist and add the first page
     url_list = list(main_url)
     #Visit the main page to collect number of pages and the first data scrape
@@ -121,11 +144,9 @@ def scrape_data():
         soup = BeautifulSoup(browser.html, 'html.parser')
         #Update the information
         pet_data.update(get_pet_info_by_url(soup))
-
-    apa_data = get_all_apa_data
-
-    #Close the browser
+    #Clos ethe browser
     browser.quit()
-    
-    return apa_data
- 
+    return pet_data
+
+if __name__ == "__main__":
+    print(get_all_apa_data())
