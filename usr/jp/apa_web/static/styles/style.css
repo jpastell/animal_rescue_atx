@@ -1,0 +1,62 @@
+.box {
+  min-height: 50px;
+  padding: 5px;
+  margin: 5px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.skyblue {
+  background: deepskyblue;
+}
+
+.purple {
+  background: rebeccapurple;
+}
+
+.red {
+  background: indianred;
+}
+
+/*Settingd for menus in navigation var*/
+.ml-auto .dropdown-menu {
+  left: auto !important;
+  right: 0px;
+}
+
+/*Stile for container inside the page*/
+.index_summary_left {
+  margin-left: 3rem;
+  margin-right: 1.5rem;
+
+}
+
+.index_summary_right {
+  margin-left: 1.5rem;
+  margin-right: 3rem;
+
+}
+
+
+/*
+.rigth-style-nav {
+  left: auto !important;
+  right: 0px;
+}
+*/
+
+.footer1 {
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.comparison_head {
+  text-align:center;
+}
+

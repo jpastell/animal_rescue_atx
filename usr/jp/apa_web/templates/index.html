@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework Index Page</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.css') }}">
+  <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <div class="container"> 
+        <!-- Main reference -->
+        <a href="#" class="navbar-brand">Mission to mars</a>
+        <!-- Select the items to colllapse-->
+      </div>
+    </nav>
+
+    <div class="row" style="margin-top: 6rem;">
+    </div>
+
+    <div class="container">
+      <div class="row"> <!--First row-->
+          <div class="col-lg-12 col-md-12 col-sm-12" ><!-- Sumary -->
+              <div class="card border-primary mb-3">
+                  <div class="card-block ">
+                      <h4 class="card-header">Mission to mars App</h4>
+                      <div class="card-body">
+                        <p><a class="btn btn-primary btn-lg center" href="/scrape" role="button">Scrape New Data</a></p>
+                      </div>
+                  </div>
+              </div>
+          </div> <!-- End Sumary -->
+    
+        <div class="col-lg-12 col-md-12 col-sm-12" ><!-- news -->
+            <div class="card border-primary mb-3">
+                <div class="card-block ">
+                    <h4 class="card-header">Latest Mars News</h4>
+                    <div class="card-body">
+                        <h5>{{ marsData.nTitle }}</h5>
+                        <p>{{ marsData.nPar }}</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End news -->
+
+        <div class="col-lg-7 col-md-7 col-sm-7" ><!-- Image -->
+          <div class="card border-primary mb-3">
+              <div class="card-block ">
+                  <h4 class="card-header">Featured Mars Image</h4>
+                  <div class="card-body">
+                      <img class="center" src="{{ marsData.featImg }}" style="width:400px;height:400px;" alt="Temperature">
+                  </div>
+              </div>
+          </div>
+        </div> <!-- End Image-->
+
+      <div class="col-lg-5 col-md-5 col-sm-5" ><!-- Image -->
+        <div class="card border-primary mb-3">
+            <div class="card-block ">
+                <h4 class="card-header">Mars data</h4>
+                <div class="card-body">
+                    <div class="card-block ">
+                        <div class="card-body">
+                          <h5>Mars weather</h5>
+                          <p class="card-text">{{ marsData.mWeather }}</p>
+                        </div>
+                        <div class="card-body">
+                            <h5>Mars facts</h5>
+                            {{ marsData.htmlTable | safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div> <!-- End Image-->
+
+          <div class="col-lg-12 col-md-12 col-sm-12"><!-- Mars Hemispheres -->
+              <div class="card border-primary mb-3" style="min-width: 25rem;">
+                  <div class="card-block ">
+                    <h4 class="card-header">Mars Hemispheres</h4>
+                    <div class="card-body">
+                      <div class="container">
+                        <div class="row">  
+                          <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="row">
+                              <img class="center" src="{{ marsData.cerbImg }}" style="width:300px;height:300px;" alt="Temperature">
+                            </div>
+                            <div class="row">
+                              <p class="center">{{ marsData.cerbTitle }}</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-md-6 col-sm-6">
+                              <div class="row">
+                                  <img class="center" src="{{ marsData.schiaImg }}" style="width:300px;height:300px;" alt="Temperature">
+                                </div>
+                                <div class="row">
+                                  <p class="center">{{ marsData.schiaTitle }}</p>
+                                </div>
+                          </div>
+                        </div>
+                        <div class="row">  
+                          <div class="col-lg-6 col-md-6 col-sm-6">
+                              <div class="row">
+                                  <img class="center" src="{{ marsData.syrImg }}" style="width:300px;height:300px;" alt="Temperature">
+                                </div>
+                                <div class="row">
+                                  <p class="center">{{ marsData.syrTitle }}</p>
+                                </div>
+                          </div>
+                          <div class="col-lg-6 col-md-6 col-sm-6">
+                              <div class="row">
+                                  <img class="center" src="{{ marsData.valImg }}" style="width:300px;height:300px;" alt="Temperature">
+                                </div>
+                                <div class="row">
+                                  <p class="center">{{ marsData.vallTitle }}</p>
+                                </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div> <!-- End Visualizations -->
+      </div><!--End of first row-->
+    </div>
+    <div class="row" style="margin-top: 3rem;">
+    </div>
+    <div class="fixed-bottom navbar-dark bg-primary footer1" > <!-- Fotter -->
+        <p><small> © jpastell all rigths reserved</small></p>
+    </div>
+
+</body>
+
+</html>
