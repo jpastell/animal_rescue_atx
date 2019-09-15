@@ -126,6 +126,6 @@ def scrape_data():
 
     #Close the browser
     browser.quit()
-    return pet_data
+    
     return apa_data
  
