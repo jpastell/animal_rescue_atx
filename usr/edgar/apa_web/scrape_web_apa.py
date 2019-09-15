@@ -27,7 +27,9 @@ def strat_browser():
     elif(platform.system() == 'Windows'):
         print("Mac system detected, loading chrome driver...")
         #-------------------------------
-        #Edgar add you browser code here
+        executable_path = {'executable_path': 'chromedriver.exe'}
+        windows_browser = Browser('chrome', **executable_path, headless=False)
+        return windows_browser
         #-------------------------------
 
         #-------------------------------
