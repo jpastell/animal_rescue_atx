@@ -1,0 +1,386 @@
+cat,child,dog,home_alone,pet_age,pet_breed,pet_id,pet_location,pet_name,pet_sex
+1,2,1,4,6.58,"Terrier, Pit Bull / Mix",APA-A-36615,Foster,Sparky,Male
+0,1,1,5,3.75,Mixed Breed (Large) / Great Dane,APA-A-45785,TLAC,Rio,Male
+2,1,1,5,5.67,"Shepherd, Anatolian / Mix",APA-A-47726,TLAC,Twister,Male
+2,1,2,4,6.58,"Retriever, Yellow Labrador / Mix",APA-A-49698,TLAC,Beryl,Male
+2,1,1,5,5.5,Hound / Hound,APA-A-43905,TLAC,Brindle,Male
+3,1,1,4,4.42,Hound / Mix,APA-A-35188,Foster,Ziggy,Male
+0,3,1,5,4.0,"Retriever, Labrador / Mix",APA-A-53121,Foster,Grayson,Male
+0,1,2,3,6.67,Bernese Mountain Dog / Mix,APA-A-53740,TLAC,Ludwig,Male
+2,1,1,4,5.83,"Terrier, Pit Bull / Mix",APA-A-54604,Foster,Vegas,Male
+0,2,4,4,5.92,"Retriever, Labrador / Mix",APA-A-54851,TLAC,June Bug,Female
+2,1,2,4,4.75,Catahoula Leopard Dog / Mix,APA-A-37564,TLAC,Rocco,Male
+1,1,2,2,6.83,"Retriever, Labrador / Mix",APA-A-55056,TLAC,Jake Ryan,Male
+1,2,1,4,7.92,Mixed Breed (Medium) / Mix,APA-A-55237,Foster,Brooks,Male
+3,4,1,3,10.25,"Retriever, Black Labrador",APA-A-55491,Foster,Schone,Female
+1,2,1,4,4.42,"Terrier, Pit Bull / Mix",APA-A-40017,Foster,Monty,Male
+0,2,3,5,9.0,"Retriever, Labrador / Mix",APA-A-36893,Foster,Nike,Male
+0,2,3,3,6.5,Retriever / Mixed Breed (Large),APA-A-57113,Foster,Bob Barker,Male
+0,2,2,4,9.83,"Retriever, Black Labrador / Mix",APA-A-57449,Foster,Bethany,Female
+1,1,1,5,5.08,"Retriever, Black Labrador / Mix",APA-A-53450,TLAC,Jasmine,Female
+0,1,2,3,4.33,"Retriever, Labrador / Shepherd, German",APA-A-58608,TLAC,Manning,Male
+0,1,1,5,4.67,"Terrier, Pit Bull / Mix",APA-A-59189,Foster,Benito,Male
+4,1,3,4,7.5,"Terrier, Pit Bull / Mix",APA-A-59431,TLAC,Princeton,Male
+2,3,2,3,7.92,"Retriever, Labrador / Mix",APA-A-55345,Foster,Cricket,Female
+2,2,2,3,6.83,Mixed Breed (Large) / Mix,APA-A-60553,Foster,Toro,Male
+2,2,2,4,3.67,Mixed Breed (Medium),APA-A-61252,Foster,Sally,Female
+2,3,2,4,5.83,Mixed Breed (Medium),APA-A-56868,Foster,Migos,Male
+1,1,2,5,4.67,Retriever / Mix,APA-A-30844,Foster,Josie,Female
+2,3,1,3,2.67,Cattle Dog / Mix,APA-A-61501,TLAC,Kline,Male
+0,2,2,4,8.08,Chihuahua,APA-A-62339,Tarrytown,Miguelito,Male
+0,2,1,4,6.25,Mixed Breed (Medium) / Mix,APA-A-62575,Foster,Tom Hanks,Male
+0,2,1,4,4.83,Mixed Breed (Medium),APA-A-55843,Foster,Floppy,Male
+2,2,2,4,4.08,"Bulldog, American / Mix",APA-A-64409,TLAC,Jenga,Female
+1,4,4,3,11.0,Mixed Breed (Medium) / Mix,APA-A-64403,Foster,Brady,Male
+0,2,1,5,6.25,Mixed Breed (Large),APA-A-64524,Foster,Mr Marbles,Male
+1,2,1,4,4.08,"Retriever, Black Labrador / Mix",APA-A-64567,TLAC,Midnight,Female
+3,1,2,5,8.33,Boxer / Mixed Breed (Medium),APA-A-41503,Foster,Clark,Male
+4,2,4,4,3.83,"Coonhound, Redbone / Mix",APA-A-38221,Foster,Calvin,Male
+0,1,3,4,4.25,Boxer / Mix,APA-A-49870,TLAC,El Jefe,Male
+4,0,3,3,7.08,Dachshund / Mix,APA-A-46986,Foster,Brenda,Female
+2,2,1,4,5.83,Mixed Breed (Medium) / Mix,APA-A-65267,Foster,Sarah,Female
+0,1,1,4,3.17,Mixed Breed (Medium) / Mix,APA-A-57999,TLAC,Button,Male
+2,3,1,5,3.33,"Terrier, Pit Bull / Mix",APA-A-55076,TLAC,Sailor,Female
+0,1,3,5,3.83,"Terrier, Pit Bull / Mix",APA-A-59055,Foster,Rhino,Male
+0,2,1,1,5.67,Mixed Breed (Medium) / Boxer,APA-A-38419,TLAC,Tutu,Female
+0,4,4,4,3.83,"Terrier, Pit Bull / Mix",APA-A-66283,Foster,Churchill,Male
+0,1,2,4,4.33,"Retriever, Labrador / Mix",APA-A-55384,TLAC,John Rambo,Male
+1,1,3,2,4.75,"Shepherd, German / Mix",APA-A-62493,TLAC,Lennon,Male
+2,2,1,5,3.25,"Terrier, Pit Bull / Mix",APA-A-50261,TLAC,Mercedes,Female
+2,2,3,5,2.08,Mixed Breed (Medium) / Mix,APA-A-50976,Foster,Bel-air,Male
+0,1,3,4,4.83,Mixed Breed (Large) / Mix,APA-A-66640,TLAC,Albus,Male
+0,2,1,4,3.0,"Retriever, Yellow Labrador / Mixed Breed (Medium)",APA-A-66661,TLAC,Goldman,Male
+2,2,1,5,8.25,"Terrier, American Staffordshire / Mix",APA-A-45661,TLAC,Nokie,Female
+3,2,1,4,7.75,Mixed Breed (Medium),APA-A-36999,Foster,Mack,Male
+1,1,2,4,7.25,Mixed Breed (Medium) / Mix,APA-A-49408,Foster,Minka,Female
+2,1,2,4,4.83,"Chihuahua, Short Coat / Mix",APA-A-31118,TLAC,Fun Guy,Male
+0,1,3,3,2.75,"Hound, Pharaoh / Mix",APA-A-69626,TLAC,Lee,Male
+0,1,2,4,3.75,"Retriever, Chocolate Labrador / Mix",APA-A-69663,TLAC,Trigger,Male
+3,2,3,5,3.83,Chihuahua / Terrier,APA-A-56036,Tarrytown,Osito,Male
+0,2,1,4,3.67,Akita / Mix,APA-A-69717,TLAC,Otis,Male
+3,2,1,4,6.17,"Terrier, Pit Bull / Bulldog, American",APA-A-55324,TLAC,Spot,Male
+4,2,2,4,2.0,Basenji,APA-A-70116,Foster,Cashew,Female
+0,1,2,3,6.83,Hound / Mix,APA-A-45387,Foster,Mondo,Male
+1,2,1,4,3.17,Mixed Breed (Medium),APA-A-50809,Foster,Juanita,Female
+0,1,2,5,10.67,"Retriever, Labrador / Mix",APA-A-25593,Foster,Dennis,Male
+1,2,1,3,6.58,Mixed Breed (Medium) / Mix,APA-A-46692,TLAC,Rustler,Male
+0,1,2,3,4.42,Greyhound / Mix,APA-A-33573,TLAC,Tommy,Male
+2,2,2,3,1.83,"Cattle Dog, Australian (Blue Heeler) / Mix",APA-A-66855,TLAC,Van Gogh,Male
+0,1,2,4,3.17,"Malinois, Belgian",APA-A-69494,TLAC,Queen Brenda,Female
+0,2,3,3,7.08,Great Dane / Mix,APA-A-37920,TLAC,Pinocchio,Male
+2,3,1,4,3.75,Mixed Breed (Medium) / Mix,APA-A-56161,TLAC,Gelato,Male
+0,2,2,4,2.5,"Shepherd, Anatolian / Chow Chow",APA-A-70891,TLAC,Sullivan,Male
+0,1,3,3,2.83,"Shepherd, German / Retriever, Labrador",APA-A-71075,TLAC,Alejandro,Male
+0,1,2,4,2.58,Mixed Breed (Medium) / Mix,APA-A-50901,TLAC,Stella,Female
+0,1,2,4,6.67,Retriever / Mix,APA-A-20065,TLAC,Dino,Male
+0,3,1,4,3.67,"Coonhound, Bluetick / Mix",APA-A-37585,TLAC,Rousseau,Female
+3,2,2,3,5.92,Hound / Mix,APA-A-71312,Foster,Pumpkin,Female
+0,0,1,4,5.17,"Terrier, American Staffordshire / Mix",APA-A-71317,TLAC,Raphael,Male
+2,2,4,4,1.67,"Shepherd, German / Mix",APA-A-55862,Foster,Mike Jonze,Male
+0,2,4,3,1.42,Chihuahua / Mix,APA-A-71409,Tarrytown,Dreamboat,Male
+0,2,4,4,3.42,Chihuahua / Mix,APA-A-71406,Tarrytown,Poof,Female
+0,3,1,2,1.75,"Terrier, Pit Bull / Mix",APA-A-71315,TLAC,Mariska,Female
+0,0,2,0,2.25,"Retriever, Chocolate Labrador",APA-A-71489,TLAC,Thanos,Male
+0,2,2,5,5.08,"Terrier, American Staffordshire / Mix",APA-A-32193,Foster,Lillian,Female
+0,3,2,4,3.42,"Retriever, Black Labrador / Mix",APA-A-71498,TLAC,Mr. Pickles,Male
+1,3,2,3,4.0,"Terrier, Pit Bull / Retriever, Labrador",APA-A-51527,TLAC,Prince Charming,Male
+0,2,2,4,7.92,"Cattle Dog, Australian (Blue Heeler) / Collie, Border",APA-A-12490,TLAC,Amelia Bedelia,Female
+0,0,1,4,2.75,"Bulldog, American / Mix",APA-A-71685,TLAC,Revlon,Male
+0,2,1,3,6.58,"Terrier, Pit Bull / Mix",APA-A-19372,TLAC,Xena,Female
+0,0,4,0,8.83,"Terrier, Pit Bull / Mix",APA-A-6404,Foster,Silent Bob,Male
+0,3,3,3,1.75,"Terrier, Pit Bull / Mix",APA-A-71745,Foster,Possum,Female
+0,1,2,5,5.92,"Cattle Dog, Australian (Blue Heeler) / Mix",APA-A-38468,Foster,Howard,Male
+4,0,4,2,0.42,"Terrier, American Pit Bull",APA-A-71798,TLAC,Gale,Male
+0,2,2,4,5.92,"Shepherd, Australian / Mix",APA-A-28011,TLAC,Reno,Male
+0,2,4,1,3.42,Collie / Mix,APA-A-71948,Foster,Thomas,Male
+0,1,1,3,4.25,"Retriever, Black Labrador / Mix",APA-A-50244,TLAC,Zora,Female
+0,0,2,4,2.33,"Terrier, American Staffordshire / Mix",APA-A-72390,Foster,Denny,Male
+2,1,2,4,4.75,"Retriever, Labrador / Mix",APA-A-38108,TLAC,Cookie,Male
+3,2,4,0,0.5,Mixed Breed (Medium) / Mix,APA-A-72785,Foster,Gomez,Male
+0,0,2,0,2.33,Retriever / Mix,APA-A-72839,TLAC,Willis,Male
+0,0,1,0,3.25,"Terrier, American Pit Bull / Mix",APA-A-73067,TLAC,Zelda,Female
+1,0,2,4,2.33,"Retriever, Labrador / Mix",APA-A-73063,TLAC,Filbert,Male
+4,1,3,4,1.33,"Shepherd, Anatolian",APA-A-72999,TLAC,Bohdi,Male
+0,0,0,4,6.42,"Retriever, Labrador",APA-A-73129,Foster,Jack,Male
+2,2,2,4,2.75,"Terrier, Pit Bull / Mix",APA-A-48650,Foster,Martin,Male
+0,0,2,4,1.75,Catahoula Leopard Dog / Mix,APA-A-73283,TLAC,Marshall,Male
+0,3,1,4,6.08,Terrier / Mix,APA-A-73287,TLAC,Brandy,Female
+2,2,2,4,4.0,"Terrier, Pit Bull / Mix",APA-A-63194,TLAC,Triton,Male
+3,0,4,3,1.25,"Retriever, Labrador / Mix",APA-A-73377,TLAC,Elmo,Male
+4,2,3,3,2.0,"Terrier, American Pit Bull / Mix",APA-A-59125,TLAC,Maple,Male
+0,0,0,0,6.83,Chihuahua / Pomeranian,APA-A-73448,Foster,Harry Potter,Male
+0,2,2,0,1.25,"Terrier, Pit Bull",APA-A-73509,Foster,Charlie,Male
+2,2,1,3,6.08,"Terrier, Pit Bull",APA-A-46924,TLAC,Olympia,Female
+0,0,2,3,3.17,Chihuahua / Mix,APA-A-71256,Foster,Crackers,Male
+0,4,1,5,8.0,"Retriever, Labrador / Mix",APA-A-12538,TLAC,Martha,Female
+1,3,2,4,7.17,"Terrier, Pit Bull / Mix",APA-A-39606,Foster,Leonidas,Male
+1,2,2,4,2.5,"Bulldog, American / Mix",APA-A-71471,TLAC,Soup,Male
+1,2,1,5,10.42,Dogo Argentino / Bulldog,APA-A-32157,Foster,Big Caesar,Male
+0,0,3,0,2.33,Dogo Argentino / Mix,APA-A-73778,TLAC,Shasta,Female
+0,0,2,0,2.33,Catahoula Leopard Dog,APA-A-73794,TLAC,Sir Mix-a-Lot,Male
+0,3,4,4,5.25,"Terrier, Pit Bull / Mix",APA-A-73806,Foster,Serengeti,Female
+0,2,3,4,3.25,"Terrier, Pit Bull / Mix",APA-A-73815,TLAC,Parker,Male
+1,0,0,3,2.25,"Retriever, Labrador / Mix",APA-A-73813,TLAC,Harmony,Female
+0,0,2,4,2.08,Retriever / Mix,APA-A-62458,TLAC,Todd,Male
+0,0,0,0,5.25,"Terrier, Pit Bull",APA-A-73822,TLAC,Molly,Female
+3,4,0,3,1.33,"Hound, Plott",APA-A-73914,TLAC,Altaria,Female
+2,2,2,3,2.42,"Retriever, Black Labrador / Mixed Breed (Medium)",APA-A-71768,TLAC,Scott,Male
+0,0,2,4,6.25,"Terrier, Bull / Chinese Shar-Pei",APA-A-73983,TLAC,Zephyr,Male
+0,0,2,4,4.25,"Bulldog, American",APA-A-73981,TLAC,Sage,Female
+3,3,3,4,1.25,"Pyrenees, Great / Retriever, Labrador",APA-A-73987,TLAC,Flute,Female
+4,0,4,2,0.17,"Retriever, Labrador / Mix",APA-A-74046,Foster,Tempo,Male
+4,0,4,2,0.17,"Retriever, Labrador / Mix",APA-A-74049,Foster,Melody,Male
+0,2,3,4,4.17,"Terrier, Pit Bull",APA-A-74051,Foster,Chicklet,Female
+4,0,3,4,8.17,Chihuahua,APA-A-74053,Foster,Sophia,Female
+2,3,2,4,3.25,"Terrier, American Pit Bull / Terrier, American Staffordshire",APA-A-74140,TLAC,Snortlette,Female
+4,4,4,2,10.17,"Poodle, Miniature",APA-A-74099,Foster,Margrrrita,Female
+0,2,1,4,2.25,Husky / Mix,APA-A-74082,TLAC,Bette,Female
+4,0,4,3,0.83,"Great Dane / Retriever, Black Labrador",APA-A-74064,Foster,Rosebud,Female
+0,0,3,4,4.25,Mixed Breed (Medium),APA-A-74132,TLAC,James Bond,Male
+0,0,3,4,2.25,"Retriever, Labrador / Pointer",APA-A-74126,TLAC,Elmer,Male
+0,1,2,0,1.83,Bernese Mountain Dog / Mix,APA-A-65855,TLAC,Schroeder,Male
+0,1,2,3,2.83,"Collie, Border / Mix",APA-A-66365,TLAC,Joshua,Male
+3,2,4,4,3.5,"Retriever, Labrador / Mix",APA-A-39544,TLAC,Pippen,Male
+0,0,3,3,0.92,"Shepherd, German / Mix",APA-A-74279,TLAC,Mr. Squiggles,Male
+0,4,4,2,0.83,"Retriever, Labrador / Mix",APA-A-74250,Foster,Elton,Male
+0,0,0,0,2.17,Mixed Breed (Medium),APA-A-74276,Foster,Prince Harry,Male
+0,0,0,0,1.33,"Pyrenees, Great / Mix",APA-A-74277,Foster,Sugar,Female
+0,2,3,3,1.33,"Pyrenees, Great / Mix",APA-A-74278,Foster,Spice,Female
+0,0,0,0,1.17,Chihuahua,APA-A-74282,Foster,Juno,Female
+2,2,3,4,5.5,Terrier / Mix,APA-A-26694,TLAC,Paco,Male
+3,2,3,3,12.17,"Chihuahua, Short Coat / Mix",APA-A-74352,Foster,Tip,Male
+0,2,2,3,3.58,"Cattle Dog, Australian (Red Heeler) / Mix",APA-A-40577,TLAC,Felipe,Male
+4,0,4,2,0.33,"Cattle Dog, Australian (Red Heeler)",APA-A-74380,Foster,Master,Male
+0,0,0,0,2.17,Retriever / Mix,APA-A-74437,TLAC,Jessie,Female
+0,0,2,0,2.5,"Terrier, Pit Bull / Mix",APA-A-74435,TLAC,Sir Wigglesworth,Male
+4,0,4,2,0.33,Mixed Breed (Large),APA-A-74418,Foster,Amara,Female
+4,0,4,2,0.33,Mixed Breed (Large),APA-A-74420,Foster,Beckett,Male
+4,0,4,2,0.17,Chihuahua,APA-A-74459,Foster,Cersei,Female
+4,0,4,2,0.17,Chihuahua,APA-A-74461,Foster,Drogo,Male
+0,3,0,4,1.5,"Retriever, Labrador / American Blue Heeler",APA-A-74535,Foster,Scarlett,Female
+0,0,2,4,2.67,"Retriever, Labrador / Boxer",APA-A-74562,TLAC,Dude,Male
+4,0,0,4,2.08,Black Mouth Cur,APA-A-74598,Foster,Precious,Female
+4,0,4,2,0.17,Black Mouth Cur,APA-A-74599,Foster,Nincompoop,Male
+4,0,4,2,0.17,Black Mouth Cur,APA-A-74607,Foster,Flabbergasted,Female
+3,1,3,4,5.5,Shepherd / Mix,APA-A-24854,TLAC,Ravioli,Male
+0,0,2,0,2.25,Chinese Shar-Pei / Mix,APA-A-74632,TLAC,Moxi,Female
+0,2,2,4,3.17,Mastiff / Mix,APA-A-74655,TLAC,Joker,Male
+0,3,4,4,3.17,Chihuahua,APA-A-74658,Foster,Pepper,Female
+4,2,2,4,8.0,Cattle Dog / Mix,APA-A-51960,TLAC,Vickie,Female
+0,0,0,4,3.17,"Terrier, Pit Bull",APA-A-74659,Foster,Sequoia,Female
+0,0,3,0,2.17,"Hound, Plott",APA-A-74688,Foster,Odin,Male
+0,3,3,3,2.58,"Terrier, Pit Bull / Mix",APA-A-74684,TLAC,Falcon,Male
+0,3,4,4,8.67,"Chow Chow / Retriever, Labrador",APA-A-74719,Foster,Layla,Female
+0,2,3,4,3.0,"Terrier, American Staffordshire",APA-A-71316,Foster,Shorty,Male
+4,0,4,2,0.08,Chihuahua,APA-A-74799,Foster,Blackie,Male
+4,0,4,2,0.08,Chihuahua,APA-A-74800,Foster,Black Diamond,Male
+4,0,4,2,0.08,Chihuahua / Mix,APA-A-74807,Foster,Pablo Pablano,Male
+0,1,2,5,3.67,"Terrier, American Staffordshire / Mix",APA-A-55509,TLAC,Mr. Fantastic,Male
+4,0,4,2,0.08,Chihuahua / Mix,APA-A-74809,Foster,Hamlett,Male
+4,0,4,2,0.25,"Shepherd, German / Mix",APA-A-74782,Foster,Bolo Tie,Male
+0,2,4,4,4.25,"Terrier, Pit Bull / Mix",APA-A-74843,Foster,Billy,Male
+0,0,2,4,4.08,"Terrier, American Pit Bull / Boxer",APA-A-74844,TLAC,Jagger,Male
+0,3,0,4,10.08,Chihuahua,APA-A-74838,Foster,Odette,Female
+0,2,0,0,6.5,"Terrier, Pit Bull / Mix",APA-A-74865,TLAC,Ben,Male
+4,0,4,2,0.08,"Shepherd, Anatolian",APA-A-75009,Foster,Elizabeth,Female
+0,0,3,0,6.08,"Retriever, Labrador",APA-A-74899,Foster,Chesney,Female
+4,0,2,0,3.58,Mastiff / Mix,APA-A-74894,TLAC,Tinka,Female
+2,3,2,3,7.83,"Cattle Dog, Australian (Blue Heeler) / Mix",APA-A-45985,TLAC,Kent,Male
+4,0,4,2,0.08,"Terrier, Pit Bull",APA-A-74929,Foster,Seki,Female
+4,0,4,2,0.08,"Terrier, Pit Bull",APA-A-74930,Foster,Shyanna,Female
+4,0,4,2,0.08,"Terrier, Pit Bull",APA-A-74931,Foster,Santi,Male
+0,3,3,2,3.08,"Chihuahua, Short Coat / Mix",APA-A-43151,Tarrytown,Calab,Male
+4,0,4,2,0.08,"Terrier, Pit Bull",APA-A-74932,Foster,Semer,Male
+4,0,4,2,0.08,"Terrier, Pit Bull",APA-A-74932,Foster,Semer,Male
+3,2,2,4,1.75,"Terrier, Pit Bull / Mix",APA-A-66784,Foster,Tyson,Male
+4,0,4,2,0.08,"Terrier, Pit Bull",APA-A-74926,Foster,Sabelia,Female
+4,0,4,2,0.08,"Terrier, Pit Bull",APA-A-74927,Foster,Sagara,Female
+2,1,2,4,4.75,"Terrier, Pit Bull / Mix",APA-A-65150,TLAC,Jason,Male
+4,0,4,2,0.08,"Shepherd, Anatolian",APA-A-75010,Foster,Eastwood,Male
+4,0,4,2,0.08,"Shepherd, Anatolian",APA-A-75011,Foster,Everett,Male
+4,0,4,2,0.08,"Shepherd, Anatolian",APA-A-75013,Foster,Eleanor,Female
+4,0,4,2,0.08,"Shepherd, Anatolian",APA-A-75014,Foster,Edgar,Male
+4,0,4,2,0.08,"Shepherd, Anatolian",APA-A-75015,Foster,Elena,Female
+4,0,4,2,0.08,"Shepherd, Anatolian",APA-A-75016,Foster,Emerson,Male
+3,0,4,3,0.83,Mixed Breed (Medium),APA-A-75045,Foster,Argus,Male
+0,4,4,4,13.17,"Retriever, Labrador / Chow Chow",APA-A-75102,Foster,Maggie Lab,Female
+0,0,0,0,10.08,Boxer,APA-A-75101,Foster,Loma,Female
+0,1,2,4,5.08,Mastiff / Mix,APA-A-70287,TLAC,Brixton,Male
+0,0,0,0,0.58,Chihuahua,APA-A-75142,Foster,Pistachio,Female
+4,0,4,3,0.17,"Retriever, Black Labrador / Mix",APA-A-75160,Foster,Hopi,Male
+0,2,2,4,4.5,"Terrier, Pit Bull / Mix",APA-A-41414,TLAC,Freddie,Male
+4,0,4,2,0.17,"Terrier, Pit Bull",APA-A-75212,Foster,Bumble Bee,Female
+0,0,3,0,2.17,"Terrier, Pit Bull",APA-A-75252,TLAC,Oso,Male
+0,0,0,0,1.83,"Shepherd, German / Terrier, Pit Bull",APA-A-75251,TLAC,Canelo,Male
+0,0,2,0,1.0,"Collie, Border / Mix",APA-A-75247,TLAC,Bryant,Male
+0,3,2,3,1.58,"Hound, Plott",APA-A-75249,TLAC,Monet,Female
+0,1,5,5,2.08,"Terrier, Cairn",APA-A-74224,Foster,Snax,Male
+0,3,2,3,1.58,"Hound, Plott",APA-A-75249,TLAC,Monet,Female
+0,0,3,3,2.08,Chihuahua / Mix,APA-A-75295,Foster,Kadeem,Male
+0,0,2,4,2.08,"Terrier, Pit Bull / Mix",APA-A-75292,TLAC,Willy Wonka,Male
+0,1,1,5,5.08,"Terrier, Pit Bull / Mix",APA-A-48911,TLAC,Kylie,Female
+0,0,3,0,9.75,"Retriever, Labrador / Mix",APA-A-12473,Foster,Nellie,Female
+0,0,0,0,13.58,"Poodle, Toy / Mix",APA-A-75363,Foster,Einstein,Male
+0,0,0,0,1.08,"Terrier, Pit Bull / Mix",APA-A-75358,Foster,Angelique,Female
+0,0,4,3,1.75,"Pyrenees, Great / Mix",APA-A-75378,TLAC,Mike,Male
+0,0,3,0,1.08,Pointer / Mix,APA-A-75362,TLAC,Aries,Male
+0,0,0,4,3.5,Cattle Dog / Mix,APA-A-75357,TLAC,Toast,Female
+4,0,4,2,0.17,Cattle Dog / Mix,APA-A-75417,Foster,Raisin Bran,Female
+0,0,3,4,2.08,Cattle Dog / Mix,APA-A-75421,TLAC,Special K,Female
+1,0,0,0,11.08,"Malinois, Belgian",APA-A-75423,Foster,Lucy,Female
+4,0,4,2,0.08,"Retriever, Yellow Labrador / American Blue Heeler",APA-A-75435,Foster,Hermione Granger,Female
+0,4,4,4,2.08,"Retriever, Yellow Labrador / Mix",APA-A-75434,Foster,Moaning Myrtle,Female
+4,0,4,2,0.08,"Retriever, Yellow Labrador / American Blue Heeler",APA-A-75438,Foster,Draco Malfoy,Unknown
+3,2,4,4,1.83,Shepherd / Mix,APA-A-56615,Foster,Muffin,Male
+4,0,4,2,0.08,"Retriever, Yellow Labrador / American Blue Heeler",APA-A-75439,Foster,Professor Severus Snape,Male
+4,0,4,2,0.08,"Retriever, Yellow Labrador / American Blue Heeler",APA-A-75440,Foster,Luna Lovegood,Female
+4,0,4,2,0.08,"Retriever, Yellow Labrador / American Blue Heeler",APA-A-75442,Foster,Bellatrix Lestrange,Female
+0,2,2,5,7.75,"Retriever, Labrador / Terrier",APA-A-13320,TLAC,Rosie,Female
+0,3,3,4,3.17,Chihuahua / Mix,APA-A-74331,Foster,Pupperoni,Female
+1,4,1,3,4.25,"Hound, Basset / Mixed Breed (Medium)",APA-A-50044,Foster,Angel Jack,Male
+0,0,0,0,1.92,"Terrier, Pit Bull / Mix",APA-A-75541,TLAC,Nabisco,Male
+2,2,3,3,2.17,"Shepherd, German / Mix",APA-A-74877,TLAC,Heidi,Female
+2,3,4,4,4.0,"Retriever, Black Labrador / Mix",APA-A-75554,Foster,Miles Davis,Male
+2,2,2,5,5.75,"Retriever, Labrador / Mix",APA-A-25946,TLAC,St. Patrick,Male
+0,2,0,0,2.5,"Mastiff, Cane Corso / Mix",APA-A-75591,TLAC,Drake,Male
+0,2,4,4,1.67,Beagle / Mix,APA-A-73912,Foster,Dots,Female
+0,0,4,3,1.08,"Shepherd, Dutch / Mix",APA-A-75634,Foster,Emmylou,Female
+4,0,4,2,0.25,"Husky, Siberian",APA-A-75664,TLAC,Wonderball,Male
+4,0,4,2,0.33,Terrier / Mix,APA-A-75659,Foster,Kash,Male
+0,0,4,4,5.08,"Bulldog, American / Mix",APA-A-75665,TLAC,Armani,Female
+0,2,3,4,2.67,"Shepherd, German / Mix",APA-A-54941,TLAC,Titus,Male
+3,3,3,5,3.67,"Retriever, Black Labrador / Mix",APA-A-48740,TLAC,Carrie,Female
+0,3,2,4,2.42,"Pinscher, Miniature / Mix",APA-A-57744,TLAC,Dachel,Male
+1,2,3,2,3.17,"Retriever, Labrador / Mix",APA-A-49975,TLAC,Nerf,Male
+0,0,0,0,1.5,"Pyrenees, Great",APA-A-75736,Foster,John Boy,Male
+4,0,4,2,0.42,"Terrier, Pit Bull / Terrier, Bull",APA-A-75763,TLAC,Radar,Male
+0,0,3,3,1.5,"Terrier, Pit Bull / Mix",APA-A-75758,TLAC,Ramen,Male
+0,2,3,3,5.08,Chihuahua / Mix,APA-A-75755,Tarrytown,Hornet,Male
+0,3,3,4,3.08,"Terrier, Pit Bull",APA-A-75761,TLAC,July,Female
+0,0,4,3,1.0,"Retriever, Chocolate Labrador",APA-A-75768,Foster,Archer,Male
+0,2,0,0,3.42,"Terrier, Jack Russell / Mixed Breed (Small)",APA-A-75780,Tarrytown,Guero,Male
+0,0,3,4,3.0,Cattle Dog / Mix,APA-A-75769,Foster,Mickey,Female
+0,0,3,4,2.08,"Terrier, Pit Bull / Boxer",APA-A-75629,TLAC,Tonya,Female
+0,0,0,0,4.0,"Retriever, Labrador / Mix",APA-A-75772,Foster,Valentina,Female
+4,0,4,2,0.17,Mixed Breed (Medium),APA-A-75786,TLAC,Jersey,Male
+4,1,4,0,9.08,Mixed Breed (Small),APA-A-64525,Foster,Jimi Hendrix,Male
+0,0,0,0,2.0,"Terrier, American Staffordshire",APA-A-75804,TLAC,Turner,Male
+0,3,3,2,1.25,Saluki / Mix,APA-A-71234,TLAC,Suzuki,Female
+0,3,3,3,1.17,"Collie, Border / Mix",APA-A-74085,Foster,Guava,Female
+0,0,4,4,1.0,Terrier,APA-A-75790,Foster,Shu Shu,Female
+0,0,0,0,0.67,"Shepherd, German / Hound",APA-A-75792,Foster,Hippo,Male
+3,3,4,4,13.0,Beagle / Dachshund,APA-A-75801,TLAC,Rainbow,Female
+0,0,3,0,2.08,"Bulldog, American / Retriever, Labrador",APA-A-75803,TLAC,Hawthorne,Male
+0,0,0,0,0.58,"Cattle Dog, Australian (Blue Heeler) / Mix",APA-A-75807,TLAC,Theodore,Male
+0,2,0,4,4.08,"Shepherd, Anatolian / Mix",APA-A-75809,TLAC,Skywalker,Male
+4,0,4,3,0.17,Terrier,APA-A-75818,Foster,Mushu,Male
+2,2,3,4,12.67,"Retriever, Labrador / Boxer",APA-A-45756,Foster,Alfred,Male
+0,0,3,0,5.33,"Retriever, Labrador / Mix",APA-A-75834,TLAC,Olaf,Male
+0,0,0,0,5.17,Chinese Shar-Pei / Mix,APA-A-75835,TLAC,Mystique,Female
+0,0,3,3,2.58,"Shepherd, German / Rottweiler",APA-A-47378,TLAC,Abby,Female
+0,2,3,4,3.0,"Retriever, Chocolate Labrador",APA-A-75881,Foster,Thor,Male
+4,0,4,2,0.25,"Foxhound, American / Shepherd",APA-A-75888,Foster,Kodiak,Male
+4,0,4,2,0.25,"Foxhound, American / Shepherd",APA-A-75889,Foster,Glacier,Female
+4,0,4,2,0.25,"Foxhound, American / Shepherd",APA-A-75890,Foster,Gobi,Female
+0,1,2,3,4.17,"Retriever, Chocolate Labrador / Mix",APA-A-61182,TLAC,King Triton,Male
+0,2,4,5,7.33,"Chinese Shar-Pei / Bulldog, American",APA-A-32374,Foster,Cane,Male
+2,2,2,5,7.08,"Collie, Border / Retriever, Labrador",APA-A-39391,TLAC,Yahtzee,Male
+0,0,0,0,4.0,"Terrier, Pit Bull / Mix",APA-A-75915,TLAC,Misterio,Male
+0,0,0,0,4.33,"Retriever, Labrador / Mix",APA-A-75934,Foster,Ri,Female
+0,0,0,0,4.33,"Retriever, Labrador / Mix",APA-A-75934,Foster,Ri,Female
+0,0,0,0,10.83,"Terrier, Rat",APA-A-75935,Tarrytown,Kazmo,Male
+0,0,0,0,3.0,Chihuahua,APA-A-75936,Foster,Genevieve,Female
+0,0,0,0,5.58,"Shepherd, German / Mix",APA-A-75958,TLAC,Lulu,Female
+2,4,3,4,3.58,"Catahoula Leopard Dog / Shepherd, German",APA-A-70081,Foster,Prada,Female
+0,0,0,0,3.0,American Blue Heeler / Mix,APA-A-75941,Foster,Baby,Female
+0,0,0,0,10.0,"Retriever, Labrador / Mix",APA-A-75985,TLAC,AJ,Male
+4,4,2,4,2.33,Hound / Mix,APA-A-72847,TLAC,Griggs,Male
+0,0,0,0,2.0,"Terrier, Pit Bull / Retriever, Labrador",APA-A-75983,TLAC,Opie,Male
+0,4,0,0,9.0,"Retriever, Chocolate Labrador",APA-A-75989,TLAC,Grizzly,Male
+0,0,0,0,10.0,Chihuahua / Mix,APA-A-75987,Foster,Potato Ole,Male
+0,2,2,5,10.08,Shepherd / Mix,APA-A-5344,TLAC,Izzy,Female
+0,0,0,0,2.0,"Retriever, Black Labrador",APA-A-75992,Foster,Nala,Female
+0,0,0,0,4.0,Hound / Mix,APA-A-75993,Foster,Honey,Female
+0,3,2,3,2.17,"Malinois, Belgian / Mix",APA-A-76012,Foster,Jerry,Male
+4,0,4,2,0.33,"Terrier, Pit Bull / Mix",APA-A-76022,TLAC,Jermaine,Male
+4,0,4,2,0.33,"Terrier, Pit Bull / Mix",APA-A-76023,TLAC,Jackie,Female
+4,0,4,2,0.33,"Terrier, Pit Bull / Mix",APA-A-76024,TLAC,Randy,Male
+4,0,4,2,0.33,Pointer / Mix,APA-A-76040,TLAC,Hunter,Male
+0,0,0,4,1.0,"Terrier, Pit Bull / Mix",APA-A-76056,TLAC,Freddie Mercury,Male
+3,0,3,4,3.67,Mixed Breed (Medium) / Mixed Breed (Medium),APA-A-71024,TLAC,Oli Sykes,Male
+0,0,0,0,1.0,"Terrier, Pit Bull",APA-A-76047,TLAC,Frank Sinatra,Male
+0,0,3,0,1.08,Blue Lacy / Mix,APA-A-75482,TLAC,India Opal,Female
+0,0,0,0,6.0,Pointer / Mix,APA-A-76062,Foster,Aubrey,Female
+0,0,0,3,1.5,Rottweiler,APA-A-76063,Foster,Ringo,Male
+0,0,2,4,1.58,"Terrier, Pit Bull / Mix",APA-A-56883,TLAC,Paz,Female
+2,1,1,5,5.75,Mixed Breed (Medium) / Mix,APA-A-40179,TLAC,Rufus,Male
+4,0,4,2,0.42,"Shepherd, German / Mix",APA-A-76111,TLAC,Callie,Female
+4,0,4,2,0.17,Dachshund / Terrier,APA-A-76103,TLAC,Tango,Male
+3,2,2,5,2.33,"Terrier, Pit Bull / Mix",APA-A-53573,TLAC,Mary Pitt,Female
+4,0,4,2,0.17,Dachshund / Terrier,APA-A-76104,Foster,Barker,Male
+4,0,4,2,0.17,Dachshund / Terrier,APA-A-76105,Foster,Stump,Male
+4,0,4,2,0.17,Dachshund / Terrier,APA-A-76106,Foster,Reese,Female
+4,0,4,2,0.17,Dachshund / Terrier,APA-A-76108,Foster,Lavigne,Female
+0,3,4,3,7.0,Chihuahua / Mix,APA-A-76039,Tarrytown,Jiggy,Male
+4,0,4,2,0.17,Dachshund / Terrier,APA-A-76109,Foster,Jett,Female
+4,0,4,2,0.17,Dachshund / Terrier,APA-A-76110,Foster,Foxy,Female
+0,3,3,3,7.83,Mixed Breed (Small),APA-A-76129,Tarrytown,JFK,Male
+4,0,4,2,0.33,"Cattle Dog, Australian (Red Heeler)",APA-A-74381,Foster,Missy,Female
+0,0,0,0,3.67,Black Mouth Cur / Mix,APA-A-76127,Foster,Smile,Female
+4,3,4,4,5.5,Cattle Dog / Mix,APA-A-76126,Foster,Shaamus,Male
+0,2,0,0,7.25,Chihuahua / Mix,APA-A-76131,Tarrytown,Security,Male
+4,0,4,2,0.42,"Retriever, Labrador / Mix",APA-A-76128,Foster,Casper,Male
+0,0,0,0,7.0,Chihuahua / Mix,APA-A-76146,Tarrytown,Phyllis,Female
+0,0,3,0,2.0,"Retriever, Labrador / Pyrenees, Great",APA-A-76151,TLAC,Cota,Male
+0,4,1,5,5.5,"Hound, Plott / Mix",APA-A-27139,TLAC,Azra,Female
+0,0,0,0,6.67,"Terrier, Pit Bull / Mix",APA-A-76183,TLAC,Allie,Female
+4,0,4,2,0.17,"Pointer / Retriever, Black Labrador",APA-A-76187,TLAC,Eloise,Female
+0,0,0,0,10.0,"Terrier, Rat / Chihuahua",APA-A-76184,Tarrytown,Ted,Male
+0,0,0,0,6.67,"Terrier, Pit Bull / Mix",APA-A-76183,TLAC,Allie,Female
+4,0,4,2,0.17,"Pointer / Retriever, Black Labrador",APA-A-76187,TLAC,Eloise,Female
+4,0,4,2,0.17,Mixed Breed (Medium),APA-A-76157,Foster,Casablanca,Female
+4,0,4,2,0.17,Mixed Breed (Medium),APA-A-76159,Foster,Vertigo,Female
+4,0,4,2,0.17,Mixed Breed (Medium),APA-A-76160,Foster,The Wiz,Female
+4,0,4,2,0.17,Mixed Breed (Medium),APA-A-76161,Foster,Lemon,Female
+0,0,0,0,6.08,Shepherd / Mixed Breed (Medium),APA-A-76178,Foster,Maggie Shepherd,Female
+0,0,0,0,1.5,"Terrier, Pit Bull / Mix",APA-A-76224,Foster,Chanel,Female
+4,0,4,2,0.33,"Retriever, Labrador",APA-A-76226,TLAC,Highland,Male
+1,3,3,4,1.67,"Shepherd, Belgian Malinois / Mix",APA-A-61107,TLAC,Rex,Male
+4,0,4,2,0.33,"Retriever, Labrador / Mix",APA-A-76249,TLAC,Marley,Female
+4,0,4,2,0.42,Hound / Mix,APA-A-76227,Foster,Little Sarah,Female
+4,0,3,3,1.5,"Retriever, Curly-Coated / Mix",APA-A-65819,TLAC,Mikey,Male
+0,0,0,3,1.08,"Boxer / Terrier, Pit Bull",APA-A-75668,TLAC,Dan,Male
+0,0,0,0,6.0,Mastiff,APA-A-76250,Foster,Joe,Male
+0,0,0,0,3.0,"Terrier, Pit Bull / Mix",APA-A-76283,TLAC,Noah,Male
+0,0,0,0,0.67,Cattle Dog / Mix,APA-A-76307,TLAC,Givenchy,Female
+0,0,0,0,1.5,"Collie, Smooth / Mix",APA-A-76308,TLAC,Tootles,Female
+5,2,3,5,4.25,Hound / Mix,APA-A-32756,TLAC,Napoleon,Male
+0,0,3,0,3.08,Mixed Breed (Medium),APA-A-75389,TLAC,Eva,Female
+0,0,0,0,0.83,"Retriever, Labrador / Mix",APA-A-76284,Foster,Khloe,Female
+4,4,4,4,2.0,"Retriever, Labrador / Mix",APA-A-76305,TLAC,Chocolate,Male
+0,0,0,0,10.0,"Retriever, Yellow Labrador",APA-A-76286,Foster,Sr Butter,Female
+3,0,3,3,1.0,"Beagle / Retriever, Labrador",APA-A-76303,TLAC,Niko,Male
+0,0,0,0,3.0,Catahoula Leopard Dog,APA-A-76287,Foster,Razen,Female
+0,0,0,0,1.0,Beagle / Pointer,APA-A-76304,TLAC,Gabby,Female
+0,0,0,0,0.67,Cattle Dog / Mix,APA-A-76307,TLAC,Givenchy,Female
+0,0,0,0,1.5,"Collie, Smooth / Mix",APA-A-76308,TLAC,Tootles,Female
+0,0,4,3,2.0,"Hound, Basset / Mix",APA-A-76340,TLAC,Denzel,Male
+0,0,0,0,2.0,"Sheepdog, Old English / Mix",APA-A-76328,TLAC,Apple Pie,Female
+0,0,0,0,4.0,"Shepherd, German",APA-A-76333,TLAC,Quasimodo,Male
+0,0,0,0,1.5,"Terrier, Pit Bull / Mix",APA-A-76330,TLAC,Skippy,Male
+0,0,0,0,3.0,Black Mouth Cur / Mix,APA-A-76334,TLAC,Sonny,Male
+0,0,0,0,0.83,Pointer / Mix,APA-A-76331,TLAC,Malik,Male
+4,0,4,2,0.42,"Retriever, Labrador / Mix",APA-A-76332,TLAC,Nickolas,Male
+0,0,0,0,0.5,"Retriever, Labrador",APA-A-76335,TLAC,Luna,Female
+0,0,0,0,2.5,Terrier / Mix,APA-A-76324,Tarrytown,Raggedy Ann,Female
+4,0,4,2,0.33,"Hound, Plott / Mix",APA-A-76339,TLAC,Nadine,Female
+0,0,0,0,4.0,Terrier / Chihuahua,APA-A-76323,Tarrytown,Marcella,Female
+0,3,0,0,2.5,Terrier / Mix,APA-A-76325,Tarrytown,Raggedy Andy,Male
+4,0,4,2,0.33,"Retriever, Labrador / Mix",APA-A-76352,Foster,Amethyst,Female
+0,0,0,0,0.5,"Kelpie, Australian / Mix",APA-A-76358,TLAC,Cindy Lou,Female
+0,0,0,0,0.5,"Kelpie, Australian / Mix",APA-A-76359,TLAC,Betty Sue,Female
+4,0,4,2,0.17,Shepherd,APA-A-76337,Foster,Serrano,Female
+4,0,4,2,0.17,Shepherd,APA-A-76338,Foster,Poblano,Male
+4,0,4,2,0.33,"Retriever, Labrador / Mix",APA-A-76353,Foster,Moonstone,Male
+0,0,0,0,2.67,"Retriever, Yellow Labrador",APA-A-76341,Foster,Maya,Female
+4,0,4,2,0.33,"Retriever, Labrador / Mix",APA-A-76351,Foster,Obsidian,Male
