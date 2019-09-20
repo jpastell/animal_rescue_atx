@@ -9,7 +9,6 @@ import subprocess
 import time
 import re
 
-
 #function used to initilize the browser
 def strat_browser():
     '''
@@ -104,7 +103,7 @@ def get_pet_info_by_url(soup):
                     if('star full' == star['alt']):
                          category_score += 1
                 #Update the dictionary for each stat
-                pet_data.update({category_name:category_score})
+                pet_data.update({category_name.replace(" ", "").lower():category_score})
         pet_data.update({"pet_id":pet_id})
         #Update the main dictionary with the ID as main key and return
         pet_entry.append(pet_data)

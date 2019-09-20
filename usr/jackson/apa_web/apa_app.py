@@ -43,7 +43,7 @@ def scrape():
 def api():
     #api_dict = {}
     pets_data = mongo.db.collection.find({}, {"_id":0, "pet_name":1, "pet_age": 1, "pet_sex": 1, "pet_breed": 1, "pet_location": 1,
-    "Dog": 1, "Cat": 1, "Child": 1, "Home_Alone": 1, "pet_id": 1})
+    "dog": 1, "cat": 1, "child": 1, "homealone": 1, "pet_id": 1})
 #    pets_string = ",<BR> ".join(map(str,list(pets_data)))
 #    print(pets_string)
     return jsonify(list(pets_data))
