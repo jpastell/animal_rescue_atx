@@ -138,7 +138,7 @@ def get_all_apa_data():
     pet_data = pet_data + get_pet_info_by_url(soup)
     #Iterate over the next pages to get the complete data, we start in 2 bacause
     #index 1 is the pain page
-    for page_idx in range(2,2):#total_pages+1):
+    for page_idx in range(2,total_pages+1):
         #Build the new page
         page_url = bas_url_4_page + str(page_idx)
         #Visit the new page
@@ -152,4 +152,8 @@ def get_all_apa_data():
     return pet_data
 
 if __name__ == "__main__":
-    print(get_all_apa_data())
+    #Get the data
+    data_list = get_all_apa_data()
+    temp_df = pd.DataFrame(data_list)
+    print(temp_df.head())
+    temp_df.to_csv("pets.csv",index=False)
