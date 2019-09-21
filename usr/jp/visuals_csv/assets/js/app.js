@@ -1,49 +1,102 @@
+//
+// // Load data from hours-of-tv-watched.csv
+// d3.csv("assets/data/pets.csv", function(error, factData) {
+//   if (error) throw error;
+//
+//   //Cast the data type from string to integer
+//   factData.forEach(function(data) {
+//     data.cat = +data.cat;
+//     data.dog = +data.dog;
+//     data.child = +data.child;
+//     data.home_alone = +data.home_alone;
+//     data.pet_age = +data.pet_age;
+//   });
+//
+//   console.log(factData);
+//
+//   var data = [{
+//     type: "sunburst",
+//     labels:  ["Dogs", "Female", "Male", "Foster", "Shelter", "Foster", "Shelter"],
+//     parents: ["",     "Dogs",   "Dogs", "Female", "Female",  "Male",   "Male"],
+//     values:  [20,     10,       10,     8,         2,         5,        5],
+//     outsidetextfont: {size: 20, color: "#377eb8"},
+//     leaf: {opacity: 0.4},
+//     marker: {line: {width: 2}},
+//   }];
+//
+//   var layout = {
+//     margin: {l: 0, r: 0, b: 0, t: 0},
+//     width: 500,
+//     height: 500
+//   };
+//
+//
+//   Plotly.newPlot('sunBurst', data, layout);
+//
+//
+// });
 
-// Load data from hours-of-tv-watched.csv
-d3.csv("assets/data/pets.csv", function(error, factData) {
-  if (error) throw error;
+//------------------------------------
+//Spider chart
+//------------------------------------
+//When call draw the spider chard on the div with the ID
+function buildSpider(){
+    data = [{
+        type: 'scatterpolar',
+        r: [1, 2, 1, 4, 1],
+        theta: ['Cat','Child','Dog', 'Home Alone', "Cat"],
+        fill: 'toself'
+      }]
 
-  //Cast the data type from string to integer
-  factData.forEach(function(data) {
-    data.cat = +data.cat;
-    data.dog = +data.dog;
-    data.child = +data.child;
-    data.home_alone = +data.home_alone;
-    data.pet_age = +data.pet_age;
-  });
+      layout = {
+        title:"Dog",
+        polar: {
+          // domain: {
+          //   x: [0, 0.46],
+          //   y: [0.56, 1]
+          // },
+          radialaxis: {
+            visible: true,
+            range: [0, 5]
+          }
+        },
+        showlegend: false
+      }
 
-  console.log(factData);
+      Plotly.plot("tipDiv", data, layout)
+};
 
-  var data = [{
-    type: "sunburst",
-    labels:  ["Dogs", "Female", "Male", "Foster", "Shelter", "Foster", "Shelter"],
-    parents: ["",     "Dogs",   "Dogs", "Female", "Female",  "Male",   "Male"],
-    values:  [20,     10,       10,     8,         2,         5,        5],
-    outsidetextfont: {size: 20, color: "#377eb8"},
-    leaf: {opacity: 0.4},
-    marker: {line: {width: 2}},
-  }];
+//------------------------------------
+// Tool Tip
+//------------------------------------
+function updateToolTip(Data, hexPathGroup) {
 
-  var layout = {
-    margin: {l: 0, r: 0, b: 0, t: 0},
-    width: 500,
-    height: 500
-  };
+  var toolTip = d3.tip()
+    .attr("class", "tooltip")
+    .offset([80, -60])
+    .html(function(d) {
+      return("<div id='tipDiv' class='ToolTipSpider'></div>")
+    });
 
+  hexPathGroup.call(toolTip);
+  //On click
+  hexPathGroup.on("click", function(data) {
+    toolTip.show();
+    buildSpider()
+  })
+    // onmouseout event
+    .on("mouseout", function(data, index) {
+      toolTip.hide(data);
+    });
 
-  Plotly.newPlot('sunBurst', data, layout);
+  return hexPathGroup;
+}
 
-
-});
-
-//A color scale
 var colorScale = d3.scaleLinear()
-    .range(["#2c7bb6", "#00a6ca","#00ccbc","#90eb9d","#ffff8c",
-            "#f9d057","#f29e2e","#e76818","#d7191c"]);
-
+    .range(["#00a6ca","#90eb9d", "#ffff8c","#f29e2e","#e76818"]);
 
 var min=0;
-var max=8;
+var max=5;
 var random = Math.floor(Math.random() * (+max - +min)) + +min;
 
 var margin = {
@@ -77,46 +130,38 @@ var svg = d3.select(".feo").append("svg")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-//--------------------------------------------------------------------------------
-//Linear Grad
-//--------------------------------------------------------------------------------
-//Append a defs (for definition) element to your SVG
-var defs = svg.append("defs");
-
-//Append a linearGradient element to the defs and give it a unique id
-var linearGradient = defs.append("linearGradient").attr("id", "linear-gradient");
-
-
-
-//Append multiple color stops by using D3's data/enter step
-linearGradient.selectAll("stop")
-    .data( colorScale.range() )
-    .enter().append("stop")
-    .attr("offset", function(d,i) { console.log(i/(colorScale.range().length-1)); return i/(colorScale.range().length-1); })
-    .attr("stop-color", function(d) { return d; });
-//--------------------------------------------------------------------------------
-
 //Set the hexagon radius
 var hexbin = d3.hexbin().radius(hexRadius);
 
+
+//console.log(hexbin(points));
+var cart = [];
+hexBinPoints = hexbin(points);
+hexBinPoints.forEach(function (x) {
+  cart.push({"hexObj":x,"color":colorScale.range()[Math.floor(Math.random() * (+max - +min)) + +min]});
+});
+
+console.log(cart);
+
 //Draw the hexagons
-svg.append("g")
-    .selectAll(".hexagon")
-    .data(hexbin(points))
-    .enter().append("path")
+var hexCount = svg.append("g");
+
+var hexaClass = hexCount.selectAll(".hexagon")
+    //.data(hexbin(points))
+    .data(cart)
+    .enter()
+
+var hexaPath = hexaClass.append("path")
     .attr("class", "hexagon")
     .attr("d", function (d) {
-        return "M" + d.x + "," + d.y + hexbin.hexagon();
+        return "M" + d.hexObj.x + "," + d.hexObj.y + hexbin.hexagon();
     })
     .attr("stroke", "white")
     .attr("stroke-width", "1px")
-    // .style("fill", "teal");
     .style("fill",  function (d,i) {
-                      console.log("d=%d i =%d",d,i);
-                      //return color[i];
-                      //return "teal";
-                      console.log();
-                      return colorScale.range()[Math.floor(Math.random() * (+max - +min)) + +min];
-                      //return("url(#linear-gradient)");
+                      console.log(d.color);
+                      return d.color;
                     }
     );
+
+updateToolTip("s",hexaPath);
