@@ -1,56 +1,86 @@
-
-// Load data from hours-of-tv-watched.csv
-d3.csv("assets/data/pets.csv", function(error, factData) {
-  if (error) throw error;
-
-  //Cast the data type from string to integer
-  factData.forEach(function(data) {
-    data.cat = +data.cat;
-    data.dog = +data.dog;
-    data.child = +data.child;
-    data.home_alone = +data.home_alone;
-    data.pet_age = +data.pet_age;
-  });
-
-  console.log(factData);
-
-  var data = [{
-    type: "sunburst",
-    labels:  ["Dogs", "Female", "Male", "Foster", "Shelter", "Foster", "Shelter"],
-    parents: ["",     "Dogs",   "Dogs", "Female", "Female",  "Male",   "Male"],
-    values:  [20,     10,       10,     8,         2,         5,        5],
-    outsidetextfont: {size: 20, color: "#377eb8"},
-    leaf: {opacity: 0.4},
-    marker: {line: {width: 2}},
-  }];
-
-  var layout = {
-    margin: {l: 0, r: 0, b: 0, t: 0},
-    width: 500,
-    height: 500
-  };
-
-
-  Plotly.newPlot('sunBurst', data, layout);
-
-
-});
+//
+// // Load data from hours-of-tv-watched.csv
+// d3.csv("assets/data/pets.csv", function(error, factData) {
+//   if (error) throw error;
+//
+//   //Cast the data type from string to integer
+//   factData.forEach(function(data) {
+//     data.cat = +data.cat;
+//     data.dog = +data.dog;
+//     data.child = +data.child;
+//     data.home_alone = +data.home_alone;
+//     data.pet_age = +data.pet_age;
+//   });
+//
+//   console.log(factData);
+//
+//   var data = [{
+//     type: "sunburst",
+//     labels:  ["Dogs", "Female", "Male", "Foster", "Shelter", "Foster", "Shelter"],
+//     parents: ["",     "Dogs",   "Dogs", "Female", "Female",  "Male",   "Male"],
+//     values:  [20,     10,       10,     8,         2,         5,        5],
+//     outsidetextfont: {size: 20, color: "#377eb8"},
+//     leaf: {opacity: 0.4},
+//     marker: {line: {width: 2}},
+//   }];
+//
+//   var layout = {
+//     margin: {l: 0, r: 0, b: 0, t: 0},
+//     width: 500,
+//     height: 500
+//   };
+//
+//
+//   Plotly.newPlot('sunBurst', data, layout);
+//
+//
+// });
 
 //------------------------------------
-// function used for updating circles group with new tooltip
+//Spider chart
+//------------------------------------
+function buildSpider(){
+    data = [{
+        type: 'scatterpolar',
+        r: [1, 2, 1, 4, 1],
+        theta: ['Cat','Child','Dog', 'Home Alone', "Cat"],
+        fill: 'toself'
+      }]
+
+      layout = {
+        polar: {
+          radialaxis: {
+            visible: true,
+            range: [0, 5]
+          }
+        },
+        showlegend: false
+      }
+
+      Plotly.plot("tipDiv", data, layout)
+};
+
+//------------------------------------
+// Tool Tip
+//------------------------------------
 function updateToolTip(Data, hexPathGroup) {
 
   var toolTip = d3.tip()
     .attr("class", "tooltip")
     .offset([80, -60])
     .html(function(d) {
-      return (`${d.color}<br>${d["Data"]}`);
+      // return (`${d.color}<br>${d["Data"]}`);
+      // return("<p> Tool tip spider chart</p> <div id='tipDiv'></div>")
+      return("<div id='tipDiv'></div>")
     });
 
   hexPathGroup.call(toolTip);
 
-  hexPathGroup.on("mouseover", function(data) {
-    toolTip.show(data);
+  // hexPathGroup.on("mouseover", function(data) {
+  hexPathGroup.on("click", function(data) {
+    //toolTip.show(data);
+    toolTip.show();
+    buildSpider()
   })
     // onmouseout event
     .on("mouseout", function(data, index) {
@@ -61,13 +91,15 @@ function updateToolTip(Data, hexPathGroup) {
 }
 
 //A color scale
-var colorScale = d3.scaleLinear()
-    .range(["#2c7bb6", "#00a6ca","#00ccbc","#90eb9d","#ffff8c",
-            "#f9d057","#f29e2e","#e76818","#d7191c"]);
+// var colorScale = d3.scaleLinear()
+//     .range(["#2c7bb6", "#00a6ca","#00ccbc","#90eb9d","#ffff8c",
+//             "#f9d057","#f29e2e","#e76818","#d7191c"]);
 
+var colorScale = d3.scaleLinear()
+    .range(["#00a6ca","#90eb9d", "#ffff8c","#f29e2e","#e76818"]);
 
 var min=0;
-var max=8;
+var max=5;
 var random = Math.floor(Math.random() * (+max - +min)) + +min;
 
 var margin = {
@@ -110,6 +142,7 @@ var cart = [];
 hexBinPoints = hexbin(points);
 hexBinPoints.forEach(function (x) {
   cart.push({"hexObj":x,"color":colorScale.range()[Math.floor(Math.random() * (+max - +min)) + +min]});
+  //  cart.push({"hexObj":x,"color":"teal"});
 });
 
 console.log(cart);
