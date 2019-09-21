@@ -39,6 +39,7 @@
 //------------------------------------
 //Spider chart
 //------------------------------------
+//When call draw the spider chard on the div with the ID
 function buildSpider(){
     data = [{
         type: 'scatterpolar',
@@ -48,7 +49,12 @@ function buildSpider(){
       }]
 
       layout = {
+        title:"Dog",
         polar: {
+          // domain: {
+          //   x: [0, 0.46],
+          //   y: [0.56, 1]
+          // },
           radialaxis: {
             visible: true,
             range: [0, 5]
@@ -69,16 +75,12 @@ function updateToolTip(Data, hexPathGroup) {
     .attr("class", "tooltip")
     .offset([80, -60])
     .html(function(d) {
-      // return (`${d.color}<br>${d["Data"]}`);
-      // return("<p> Tool tip spider chart</p> <div id='tipDiv'></div>")
-      return("<div id='tipDiv'></div>")
+      return("<div id='tipDiv' class='ToolTipSpider'></div>")
     });
 
   hexPathGroup.call(toolTip);
-
-  // hexPathGroup.on("mouseover", function(data) {
+  //On click
   hexPathGroup.on("click", function(data) {
-    //toolTip.show(data);
     toolTip.show();
     buildSpider()
   })
@@ -89,11 +91,6 @@ function updateToolTip(Data, hexPathGroup) {
 
   return hexPathGroup;
 }
-
-//A color scale
-// var colorScale = d3.scaleLinear()
-//     .range(["#2c7bb6", "#00a6ca","#00ccbc","#90eb9d","#ffff8c",
-//             "#f9d057","#f29e2e","#e76818","#d7191c"]);
 
 var colorScale = d3.scaleLinear()
     .range(["#00a6ca","#90eb9d", "#ffff8c","#f29e2e","#e76818"]);
@@ -142,7 +139,6 @@ var cart = [];
 hexBinPoints = hexbin(points);
 hexBinPoints.forEach(function (x) {
   cart.push({"hexObj":x,"color":colorScale.range()[Math.floor(Math.random() * (+max - +min)) + +min]});
-  //  cart.push({"hexObj":x,"color":"teal"});
 });
 
 console.log(cart);
@@ -162,15 +158,9 @@ var hexaPath = hexaClass.append("path")
     })
     .attr("stroke", "white")
     .attr("stroke-width", "1px")
-    // .style("fill", "teal");
     .style("fill",  function (d,i) {
-                      //console.log("d=%d i =%d",d,i);
-                      //return color[i];
                       console.log(d.color);
                       return d.color;
-                      //console.log();
-                      //return colorScale.range()[Math.floor(Math.random() * (+max - +min)) + +min];
-                      //return("url(#linear-gradient)");
                     }
     );
 
