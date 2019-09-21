@@ -36,6 +36,30 @@ d3.csv("assets/data/pets.csv", function(error, factData) {
 
 });
 
+//------------------------------------
+// function used for updating circles group with new tooltip
+function updateToolTip(Data, hexPathGroup) {
+
+  var toolTip = d3.tip()
+    .attr("class", "tooltip")
+    .offset([80, -60])
+    .html(function(d) {
+      return (`${d.color}<br>${d["Data"]}`);
+    });
+
+  hexPathGroup.call(toolTip);
+
+  hexPathGroup.on("mouseover", function(data) {
+    toolTip.show(data);
+  })
+    // onmouseout event
+    .on("mouseout", function(data, index) {
+      toolTip.hide(data);
+    });
+
+  return hexPathGroup;
+}
+
 //A color scale
 var colorScale = d3.scaleLinear()
     .range(["#2c7bb6", "#00a6ca","#00ccbc","#90eb9d","#ffff8c",
@@ -77,46 +101,44 @@ var svg = d3.select(".feo").append("svg")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-//--------------------------------------------------------------------------------
-//Linear Grad
-//--------------------------------------------------------------------------------
-//Append a defs (for definition) element to your SVG
-var defs = svg.append("defs");
-
-//Append a linearGradient element to the defs and give it a unique id
-var linearGradient = defs.append("linearGradient").attr("id", "linear-gradient");
-
-
-
-//Append multiple color stops by using D3's data/enter step
-linearGradient.selectAll("stop")
-    .data( colorScale.range() )
-    .enter().append("stop")
-    .attr("offset", function(d,i) { console.log(i/(colorScale.range().length-1)); return i/(colorScale.range().length-1); })
-    .attr("stop-color", function(d) { return d; });
-//--------------------------------------------------------------------------------
-
 //Set the hexagon radius
 var hexbin = d3.hexbin().radius(hexRadius);
 
+
+//console.log(hexbin(points));
+var cart = [];
+hexBinPoints = hexbin(points);
+hexBinPoints.forEach(function (x) {
+  cart.push({"hexObj":x,"color":colorScale.range()[Math.floor(Math.random() * (+max - +min)) + +min]});
+});
+
+console.log(cart);
+
 //Draw the hexagons
-svg.append("g")
-    .selectAll(".hexagon")
-    .data(hexbin(points))
-    .enter().append("path")
+var hexCount = svg.append("g");
+
+var hexaClass = hexCount.selectAll(".hexagon")
+    //.data(hexbin(points))
+    .data(cart)
+    .enter()
+
+var hexaPath = hexaClass.append("path")
     .attr("class", "hexagon")
     .attr("d", function (d) {
-        return "M" + d.x + "," + d.y + hexbin.hexagon();
+        return "M" + d.hexObj.x + "," + d.hexObj.y + hexbin.hexagon();
     })
     .attr("stroke", "white")
     .attr("stroke-width", "1px")
     // .style("fill", "teal");
     .style("fill",  function (d,i) {
-                      console.log("d=%d i =%d",d,i);
+                      //console.log("d=%d i =%d",d,i);
                       //return color[i];
-                      //return "teal";
-                      console.log();
-                      return colorScale.range()[Math.floor(Math.random() * (+max - +min)) + +min];
+                      console.log(d.color);
+                      return d.color;
+                      //console.log();
+                      //return colorScale.range()[Math.floor(Math.random() * (+max - +min)) + +min];
                       //return("url(#linear-gradient)");
                     }
     );
+
+updateToolTip("s",hexaPath);
