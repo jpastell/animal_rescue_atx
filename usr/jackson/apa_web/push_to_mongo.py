@@ -20,10 +20,10 @@ for each in reader:
     mongo.db.animals.insert_one(row)
 
 # Pushing shelter coordinates data into mongo
-csvfile_2 = open('../csv_docs/shelters_coordinates_austin.csv', 'r')
+csvfile_2 = open('../csv_docs/shelters_coordinates_austin_updated.csv', 'r')
 reader = csv.DictReader( csvfile_2 )
 mongo.db.coordinates.drop()
-header= ["Animal ID", "Lat", "Lng"]
+header= ["index", "lon", "lat", "addresses", "LooksLike"]
 for each in reader:
     row={}
     for field in header:

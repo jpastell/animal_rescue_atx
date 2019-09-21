@@ -35,15 +35,30 @@ def scrape():
         mongo.db.austin_pets_alive.insert_one(pet)
 
     # Redirect back to home page
-    return redirect("/api")
+    return redirect("/apa_api")
 
-@app.route("/api")
-def api():
+@app.route("/apa_api")
+def apa_api():
     #api_dict = {}
     pets_data = mongo.db.austin_pets_alive.find({}, {"_id":0, "pet_name":1, "pet_age": 1, "pet_sex": 1, "pet_breed": 1, "pet_location": 1,
     "dog": 1, "cat": 1, "child": 1, "homealone": 1, "pet_id": 1})
     return jsonify(list(pets_data))
 
+## change data in the following two routes ##
+
+@app.route("/shelter_api")
+def shelter_api():
+    #api_dict = {}
+    shelter_data = mongo.db.animals.find({}, {"_id":0, "Animal ID":1, "Name": 1, "DateTime": 1, "MonthYear": 1, "Date of Birth": 1,
+    "Outcome Type": 1, "Outcome Subtype": 1, "Animal Type": 1, "Sex upon Outcome": 1, "Age upon Outcome": 1,
+    "Breed": 1, "Color": 1})
+    return jsonify(list(shelter_data))
+
+@app.route("/strays_api")
+def strays_api():
+    #api_dict = {}
+    strays_data = mongo.db.coordinates.find({}, {"_id":0, "index":1, "lon": 1, "lat": 1, "addresses": 1, "LooksLike": 1})
+    return jsonify(list(strays_data))
 
 @app.route("/fetchedjsondata")
 def fetchedjsondata():
