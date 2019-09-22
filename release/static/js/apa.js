@@ -7,17 +7,18 @@ const apa_url = "http://127.0.0.1:5000/apa_api";
 var colorScale = ["#FF5733","#FFC300", "#DAF7A6","#7DCEA0 ","#58D68D"];
 
 var margin = {
-    top: 50,
-    right: 20,
-    bottom: 20,
-    left: 50
+    top: 40,
+    right: 0,
+    bottom: 0,
+    left: 20
 },
-width = 850,
+width = 700,
 height = 350;
 //---------------------------------------------
 
 //When call draw the spider chard on the div with the ID
 function buildSpider(dataObj){
+  	Plotly.purge("spyderDraw");
     data = [{
         type: 'scatterpolar',
         r: [dataObj.stats.cat, dataObj.stats.child, dataObj.stats.dog, dataObj.stats.homealone, dataObj.stats.cat],
@@ -37,7 +38,8 @@ function buildSpider(dataObj){
         showlegend: true
       }
 
-      Plotly.plot("tipDiv", data, layout)
+      // Plotly.plot("tipDiv", data, layout)
+      Plotly.plot("spyderDraw", data, layout);
 };
 
 //Fuction used to calculate the color base on the average stats and the age
@@ -124,7 +126,7 @@ function updateToolTip(hexPathGroup) {
     .attr("class", "tooltip")
     .offset([80, -60])
     .html(function(d) {
-      return("<div id='tipDiv' class='ToolTipSpider'></div>")
+      return("<div id='tipDiv' class='ToolTipSpider2'></div>")
     });
 
   hexPathGroup.call(toolTip);
@@ -143,10 +145,16 @@ function updateToolTip(hexPathGroup) {
 }
 //------------------------------------
 
-
+function init(){
+  buildSpider({"name":"Click in any hexagon to see the stats",
+              "stats":{"cat":0,"child":0,"dog":0,"homealone":0}});
+}
 
 //This in my main function
 d3.json(apa_url).then(function(data) {
+
+  //Init empy data:
+  init();
 
   //Process the data
   var plotObj = process_apa_data(data);

@@ -55,9 +55,14 @@
 } */
 
 .ToolTipSpider{
-  /* width:300px; */
-  width: auto;
-  height: auto;
+  width:450px;
+  height: 400px;
+  /* background-color: blue; */
+}
+
+.honeyComb{
+  /* background-color: red; */
+  min-width:610px;
 }
 
 .center {
