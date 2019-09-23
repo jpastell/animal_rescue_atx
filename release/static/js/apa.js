@@ -24,11 +24,28 @@ function buildSpider(dataObj){
         r: [dataObj.stats.cat, dataObj.stats.child, dataObj.stats.dog, dataObj.stats.homealone, dataObj.stats.cat],
         theta: ['Cat','Child','Dog', 'Home Alone', "Cat"],
         fill: 'toself',
-        name: "Dog Stats"
+        name: "How good it gets with"
       }]
 
+      var sheHe = "he is in";
+      if("Female" === dataObj.sex ){
+        sheHe = "she is in";
+      }
+
+      sheHe += (" " + dataObj.location)
+
+      //Define the title
+      var newName = dataObj.name;
+      if(dataObj.sex != undefined){
+        newName = dataObj.name + " (" + dataObj.sex + " "+
+                  dataObj.age.years +"Y "+ dataObj.age.month + "M ) " +
+                  sheHe;
+      }
+
+      // "age":{"years":years,"month":month},
+
       layout = {
-        title:dataObj.name,
+        title:newName,
         polar: {
           radialaxis: {
             visible: true,
@@ -93,9 +110,13 @@ function process_apa_data(factData){
   var petData = [];
 
   factData.forEach(function(data) {
+    var years = Math.floor(data.pet_age);
+    var month = Math.round((data.pet_age - years) * 12);
     petData.push({"hexColor":get_color(data),
                   "name":data.pet_name,
                   "sex":data.pet_sex,
+                  "age":{"years":years,"month":month},
+                  "location":data.pet_location,
                   "stats":{"cat":data.cat,"dog":data.dog,"child":data.child,"homealone":data.homealone}
                 });
   });
@@ -113,12 +134,7 @@ function process_apa_data(factData){
 }
 
 
-
-
-
-//------------------------------------
 // Tool Tip
-//------------------------------------
 //This function is responsible to draw an spider chart on click
 function updateToolTip(hexPathGroup) {
 
@@ -134,17 +150,15 @@ function updateToolTip(hexPathGroup) {
   //On click
   hexPathGroup.on("click", function(data) {
     toolTip.show();
+    console.log(data);
     buildSpider(data.data);
-  })
-    // onmouseout event
-    .on("mouseout", function(data, index) {
+  }).on("mouseout", function(data, index) {
       toolTip.hide(data);
-    });
-
+  });
   return hexPathGroup;
 }
-//------------------------------------
 
+//Fuction usid to initilize data at the begining
 function init(){
   buildSpider({"name":"Click in any hexagon to see the stats",
               "stats":{"cat":0,"child":0,"dog":0,"homealone":0}});
