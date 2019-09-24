@@ -3,7 +3,8 @@
 //---------------------------------------------
 const apa_url = "http://127.0.0.1:5000/apa_api";
 
-var colorScale = ["#FF5733","#FFC300", "#DAF7A6","#7DCEA0 ","#58D68D"];
+// var colorScale = ["#FF5733","#FFC300", "#DAF7A6","#7DCEA0 ","#58D68D"];
+var colorScale = ["#F1948A","#F0B27A", "#F7DC6F","#73C6B6","#82E0AA"];
 
 var margin = {
     top: 40,
