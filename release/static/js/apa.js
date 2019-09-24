@@ -170,6 +170,31 @@ function logSunBurstData(apaData) {
   console.log("|\t|\tTLAC: %d",apaData.dogs.male.tlac.total);
   console.log("|\t|\t|\tPuppy: %d",apaData.dogs.male.tlac.puppy.total);
 }
+//****************************************************************************
+//*                             Line chart Chart                                 *
+//****************************************************************************
+function buildLineAge(dogAge){
+  trace2 = {
+    type: 'scatter',
+    x: dogAge.ageRange,
+    y: dogAge.ageCount,
+    mode: 'lines',
+    name: 'Blue',
+    line: {
+      color: '#85C1E9',
+      width: 4
+    }
+  };
+
+  var layout = {
+    width: 500,
+    height: 500
+  };
+
+  var data = [trace2];
+
+  Plotly.newPlot('agePlot', data, layout);
+}
 
 //****************************************************************************
 //*                             Spyder Chart                                 *
@@ -260,6 +285,9 @@ function process_apa_data(factData){
   var petData = [];
   //[*] SunBurst adata stored
   sunBurstData = newSunBurstData();
+  //[*] Dog age apaData
+  var dogAge = {"dogAge":[],"ageRange":[],"ageCount":[]};
+  var dogIndex = 0;
 
   //This is the loop used to iterate the data, this is used to collet all info
   //to avoid multiple iterations of the data
@@ -277,12 +305,30 @@ function process_apa_data(factData){
 
     //Data collection for plotting the sunburt
     updateSunBurst(sunBurstData,data);
+    dogAge.dogAge.push(data.pet_age);
+  });
+
+  //Get the round  maximun age
+  var maxAge = Math.round(Math.max(...dogAge.dogAge));
+  //Create a list is ages
+  for (; dogIndex < maxAge; dogIndex++) {
+    dogAge.ageRange.push(dogIndex);
+    dogAge.ageCount.push(0);
+  }
+  //Iterate the dog age inex and append the count to it
+  dogAge.dogAge.forEach(function(age) {
+    dogAge.ageCount[Math.round(age)]+=1;
   });
 
   //Log data for debug
   logSunBurstData(sunBurstData);
+  console.log(Math.max(...dogAge.dogAge));
+
+
   //Plot the sun burst data
   plotSunBurst(sunBurstData);
+  //Plot the age
+  buildLineAge(dogAge);
 
   //****************************************************************************
   //*                      Hexagon Ploting Drawing                             *
