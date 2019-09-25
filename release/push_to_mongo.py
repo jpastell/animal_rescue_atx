@@ -20,7 +20,7 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/pets_db")
 #     mongo.db.animals.insert_one(row)
 
 # Pushing shelter coordinates data into mongo
-csvfile_2 = open('../csv_docs/shelters_coordinates_austin_updated.csv', 'r')
+csvfile_2 = open('csv_docs/shelters_coordinates_austin_updated.csv', 'r')
 reader = csv.DictReader( csvfile_2 )
 mongo.db.coordinates.drop()
 header= ["index", "lon", "lat", "addresses", "LooksLike"]
