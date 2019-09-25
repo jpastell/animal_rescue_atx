@@ -68,6 +68,10 @@ def fetchedjsondata():
 def apa():
     return render_template("apa.html")
 
+@app.route("/geomap")
+def geomap():
+    return render_template("geomap.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
