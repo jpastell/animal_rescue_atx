@@ -35,7 +35,7 @@ def scrape():
         mongo.db.austin_pets_alive.insert_one(pet)
 
     # Redirect back to home page
-    return redirect("/apa_api")
+    return redirect("/apa")
 
 @app.route("/apa_api")
 def apa_api():
