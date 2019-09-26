@@ -62,7 +62,7 @@ d3.json(apa_url).then(function(geoData) {
 
   // Create overlay object to hold our overlay layer
   var overlayMaps = {
-    Strays: strays
+    Strays : strays
   };
 
   // Add the layer to the map
