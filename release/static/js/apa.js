@@ -15,6 +15,15 @@ width = 700,
 height = 350;
 //---------------------------------------------
 
+//--------------------------------------------------------------------------------
+//Linear Grad
+//--------------------------------------------------------------------------------
+
+//Gradient scale
+var colorGrad = d3.scaleLinear()
+    .range(["#F1948A","#F0B27A", "#F7DC6F","#73C6B6","#82E0AA"]);
+//--------------------------------------------------------------------------------
+
 //****************************************************************************
 //*                         Sun Burst Drawing                                *
 //****************************************************************************
@@ -172,31 +181,49 @@ function logSunBurstData(apaData) {
 //****************************************************************************
 //*                             Line chart Chart                                 *
 //****************************************************************************
-function buildLineAge(dogAge){
+function buildLineAge(dogAgeMale,dogAgeFemale){
+  trace1 = {
+    type: 'scatter',
+    x: dogAgeMale.ageRange,
+    y: dogAgeMale.ageCount,
+    mode: 'lines',
+    name: 'Male count',
+    line: {
+      color: '#AED6F1',
+      width: 4
+    }
+  };
+
   trace2 = {
     type: 'scatter',
-    x: dogAge.ageRange,
-    y: dogAge.ageCount,
+    x: dogAgeFemale.ageRange,
+    y: dogAgeFemale.ageCount,
     mode: 'lines',
-    name: 'Blue',
+    name: 'Female count',
     line: {
-      color: '#85C1E9',
+      color: '#F5B7B1',
       width: 4
     }
   };
 
   var layout = {
-    width: 500,
-    height: 500
+    width: 600,
+    height: 500,
+    xaxis: {
+        title: 'Dog age(years)'
+    },
+    yaxis: {
+        title: 'Dog count',
+    }
   };
 
-  var data = [trace2];
+  var data = [trace1, trace2];
 
   Plotly.newPlot('agePlot', data, layout);
 }
 
 //****************************************************************************
-//*                             Spyder Chart                                 *
+//*                             Spyder Chart                                 *color: '#85C1E9',
 //****************************************************************************
 //Function used to build the spider chart
 function buildSpider(dataObj){
@@ -206,7 +233,11 @@ function buildSpider(dataObj){
         r: [dataObj.stats.cat, dataObj.stats.child, dataObj.stats.dog, dataObj.stats.homealone, dataObj.stats.cat],
         theta: ['Cat','Child','Dog', 'Home Alone', "Cat"],
         fill: 'toself',
-        name: "Gets along with"
+        name: "Gets along with",
+        line: {
+          color: '#73C6B6',
+          width: 4
+        }
       }]
 
       var sheHe = "he is in";
@@ -236,6 +267,56 @@ function buildSpider(dataObj){
       Plotly.plot("spyderDraw", data, layout);
 };
 //****************************************************************************
+
+//Function to dra the legend for the honeycomb
+function drawHoneyCombLegend(){
+  //Make an SVG Container
+  var svgContainer = d3.select(".legendFeo").append("svg")
+                                      .attr("width", width)
+                                      .attr("height", 80);
+
+  //Append a defs (for definition) element to your SVG
+  var defs = svgContainer.append("defs");
+
+  //Append a linearGradient element to the defs and give it a unique id
+  var linearGradient = defs.append("linearGradient").attr("id", "linear-gradient");
+
+  var recGradSize = 320;
+
+  //Append multiple color stops by using D3's data/enter step
+  linearGradient.selectAll("stop")
+      .data( colorGrad.range() )
+      .enter().append("stop")
+      .attr("offset", function(d,i) { console.log(i/(colorGrad.range().length-1)); return i/(colorGrad.range().length-1); })
+      .attr("stop-color", function(d) { return d; });
+
+  //Line with the gradient
+  var rectangle = svgContainer.append("rect")
+                              .attr("x", width/6 + 26)
+                              .attr("y", 0)
+                              .attr("width", recGradSize)
+                              .attr("height", 15)
+                              .attr("fill","url(#linear-gradient)");
+
+  //Add the text to the label hard to be adopted
+  var svgTextH = svgContainer.append("text")
+                            .attr("x",0)
+                            .attr("y",13)
+                            .attr("font-size","16px")
+                            .attr("fill","#99A3A4")
+                            .attr("font-family","sans-serif")
+                            .text("Hard to be adopted");
+
+  //Add the text to the label hard to be adopted
+  var svgTextE = svgContainer.append("text")
+                            .attr("x",recGradSize + 150)
+                            .attr("y",13)
+                            .attr("font-size","16px")
+                            .attr("fill","#99A3A4")
+                            .attr("font-family","sans-serif")
+                            .text("Easy to be adopted");
+
+}
 
 //Fuction used to calculate the color base on the average stats and the age
 function get_color(data){
@@ -285,7 +366,8 @@ function process_apa_data(factData){
   //[*] SunBurst adata stored
   sunBurstData = newSunBurstData();
   //[*] Dog age apaData
-  var dogAge = {"dogAge":[],"ageRange":[],"ageCount":[]};
+  var dogAgeMale = {"dogAge":[],"ageRange":[],"ageCount":[]};
+  var dogAgeFemale = {"dogAge":[],"ageRange":[],"ageCount":[]};
   var dogIndex = 0;
 
   //This is the loop used to iterate the data, this is used to collet all info
@@ -304,30 +386,47 @@ function process_apa_data(factData){
 
     //Data collection for plotting the sunburt
     updateSunBurst(sunBurstData,data);
-    dogAge.dogAge.push(data.pet_age);
+    //Data colection for line chart
+    if(data.pet_sex === "Male"){
+      dogAgeMale.dogAge.push(data.pet_age);
+    } else {
+      dogAgeFemale.dogAge.push(data.pet_age);
+    }
   });
 
   //Get the round  maximun age
-  var maxAge = Math.round(Math.max(...dogAge.dogAge));
+  var maxAgeMale = Math.round(Math.max(...dogAgeMale.dogAge));
+  var maxAgeFemale = Math.round(Math.max(...dogAgeFemale.dogAge));
+
   //Create a list is ages
-  for (; dogIndex < maxAge; dogIndex++) {
-    dogAge.ageRange.push(dogIndex);
-    dogAge.ageCount.push(0);
+  dogIndex = 0;
+  for (; dogIndex < maxAgeMale; dogIndex++) {
+    dogAgeMale.ageRange.push(dogIndex);
+    dogAgeMale.ageCount.push(0);
   }
+  dogIndex = 0;
+  for (; dogIndex < maxAgeFemale; dogIndex++) {
+    dogAgeFemale.ageRange.push(dogIndex);
+    dogAgeFemale.ageCount.push(0);
+  }
+
   //Iterate the dog age inex and append the count to it
-  dogAge.dogAge.forEach(function(age) {
-    dogAge.ageCount[Math.round(age)]+=1;
+  dogAgeMale.dogAge.forEach(function(age) {
+    dogAgeMale.ageCount[Math.round(age)]+=1;
+  });
+
+  dogAgeFemale.dogAge.forEach(function(age) {
+    dogAgeFemale.ageCount[Math.round(age)]+=1;
   });
 
   //Log data for debug
   logSunBurstData(sunBurstData);
-  console.log(Math.max(...dogAge.dogAge));
-
+  //console.log(Math.max(...dogAgeMale.dogAge));//dogAge
 
   //Plot the sun burst data
   plotSunBurst(sunBurstData);
   //Plot the age
-  buildLineAge(dogAge);
+  buildLineAge(dogAgeMale,dogAgeFemale);
 
   //****************************************************************************
   //*                      Hexagon Ploting Drawing                             *
@@ -442,5 +541,7 @@ d3.json(apa_url).then(function(data) {
 
   //Tooltip update
   updateToolTip(hexaPath);
+  //Draw the legend
+  drawHoneyCombLegend();
   //****************************************************************************
 });
