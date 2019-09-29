@@ -5,10 +5,11 @@
 ### Release area
 To run run the application:
 1. cd into the release folder
-2. open mondo db in a new terminal
-3. run the push_to_mongo.py python file in terminal
-4. run the apa_app.py python file in terminal
-5. open your browser and navigate trough the site.
+2. update the proper key for leaflet under release/static/js/config.js
+3. open mondo db in a new terminal
+4. run the push_to_mongo.py python file in terminal
+5. run the apa_app.py python file in terminal
+6. open your browser and navigate trough the site.
 
 ### Doc area
 
