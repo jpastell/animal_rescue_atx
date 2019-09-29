@@ -1,6 +1,6 @@
-###Welcome to Dog Rescue ATX
+# Welcome to Dog Rescue ATX
 
-###The solution is compatible with windows and mac os
+## The solution is compatible with windows and mac os
 
 ### Release area
 To run run the application:
