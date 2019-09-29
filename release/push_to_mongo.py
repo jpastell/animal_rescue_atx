@@ -7,6 +7,7 @@ from flask import Flask
 app = Flask(__name__)
 mongo = PyMongo(app, uri="mongodb://localhost:27017/pets_db")
 
+#Not used (deprecated)
 # # Pushing aac data into mongo
 # csvfile = open('../csv_docs/austin_animal_center_outcomes.csv', 'r')
 # reader = csv.DictReader( csvfile )
